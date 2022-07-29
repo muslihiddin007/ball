@@ -1,0 +1,73 @@
+:root{
+   --animation-duration:  0.5s;
+}
+
+.suport{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.smash{
+    animation-name: smash;
+    animation-duration: var(--animation-duration);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: bottom;
+}
+.shadow,.rotateimg{
+   border-radius: 50%;
+   display: inline-block;
+   width: 200px;
+   height: 200px;
+}
+.shadow{
+    animation-name: shadow;
+    animation-duration: var(--animation-duration);
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+
+}
+.rotateimg{
+    background-image: url(../../imeg/Без\ названия.jpg);
+    background-size: 100%;
+    animation-name: rotate;
+    animation-duration:calc( var(--animation-duration)*5.3);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+.box{
+    overflow: hidden;
+    left: 100%;
+}
+@keyframes shadow{
+    0%{
+        transform: translateY(0) ;
+        box-shadow: 20px 20px 10px #444466;
+    }
+    100%{
+       transform: translateY(-350px) ;
+       box-shadow: 20px 350px 250px #444466; 
+    }
+ 
+}
+
+
+@keyframes smash{
+    0%{
+        transform: scaleY(0.95);
+    }
+    19%{
+        transform: scaleY(1);
+    }
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
